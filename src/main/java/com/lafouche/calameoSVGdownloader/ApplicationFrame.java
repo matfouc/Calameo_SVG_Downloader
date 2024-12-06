@@ -319,7 +319,9 @@ public class ApplicationFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jBTN_ConvertSVG2PDFselectDownloadFolderActionPerformed
 
     private void jBTN_DownloadFolder1selectDownloadFolderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTN_DownloadFolder1selectDownloadFolderActionPerformed
-        // TODO add your handling code here:
+        int returnValue = jFC_DownloadFolder.showOpenDialog(this);
+        if(returnValue == JFileChooser.APPROVE_OPTION)
+            jLBL_SelectedDownloadFolder.setText( jFC_DownloadFolder.getSelectedFile().getAbsolutePath() );
     }//GEN-LAST:event_jBTN_DownloadFolder1selectDownloadFolderActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
